@@ -259,11 +259,11 @@ static llvm::cl::opt<std::string, true> shapeInformationOpt("shapeInformation",
     llvm::cl::value_desc("value"), llvm::cl::location(shapeInformation),
     llvm::cl::cat(OnnxMlirOptions));
 
-static llvm::cl::opt<std::string, true> customEnvFlagsOpt("customEnvFlags",
+static llvm::cl::opt<std::string, false> customEnvFlagsOpt("customEnvFlags",
     llvm::cl::desc("Override default option env var OnnxMlirEnvOptionName: "
                    "ONNX_MLIR_FLAGS"),
-    llvm::cl::value_desc("option env var"), llvm::cl::location(customEnvFlags),
-    llvm::cl::init("ONNX_MLIR_FLAGS"), llvm::cl::cat(OnnxMlirOptions));
+    llvm::cl::value_desc("option env var"), llvm::cl::init("ONNX_MLIR_FLAGS"),
+    llvm::cl::cat(OnnxMlirOptions));
 
 static llvm::cl::opt<ModelSize, true> modelSizeOpt("modelSize",
     llvm::cl::desc("Model to generate code"),

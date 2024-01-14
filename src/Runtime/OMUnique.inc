@@ -3,11 +3,10 @@
 #else
 #include <assert.h>
 #endif
-
+#include <stdio.h>
 #ifndef __USE_GNU
 #define __USE_GNU
 #endif
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
